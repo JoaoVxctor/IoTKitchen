@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.joovictor.designtry_v02" >
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="IOT Kitchen"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+         >
+
+        <!-- SPLASH SCREEN -->
+        <activity
+            android:name=".SplashDevMedia"
+            android:label="IOT Kitchen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+           <intent-filter>
+
+               <action android:name="android.intent.action.Home" />
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".BluetoothLeService"
+            android:enabled="true" />
+
+
+
+
+        <activity android:name=".DeviceScanActivity"
+        android:label="IOT Kitchen"
+            android:theme="@style/AppFullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+
+     </activity>
+
+
+        <activity android:name=".DeviceControlActivity"
+            android:label="IOT Kitchen"
+            android:theme="@style/AppFullScreenTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.Main" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="IOT Kitchen"
+            android:theme="@style/AppFullScreenTheme"
+            >
+            <!--<intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>-->
+
+        </activity>
+
+        <service android:name="RingtonePlayingService"
+            android:enabled="true">
+
+
+        </service>
+        <receiver android:name=".AlarmReceiver">
+
+        </receiver>
+
+    </application>
+
+</manifest>

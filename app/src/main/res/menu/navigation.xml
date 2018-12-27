@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_alarm"
+        android:icon="@drawable/alarm"
+        android:title="A L A R M E"/>
+
+    <item
+        android:id="@+id/navigation_bluetooth"
+        android:icon="@drawable/bluetooth"
+        android:title="B L U E T O O T H"/>
+
+
+    <item
+        android:id="@+id/navigation_basket"
+        android:icon="@drawable/basket"
+        android:title="B A S K E T"/>
+
+</menu>
